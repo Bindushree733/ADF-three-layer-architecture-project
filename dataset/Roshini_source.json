@@ -1,0 +1,26 @@
+{
+	"name": "Roshini_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blobstorage_tpch",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Roshini"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "inbound"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

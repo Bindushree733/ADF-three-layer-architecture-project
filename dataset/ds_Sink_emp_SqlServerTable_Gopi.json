@@ -1,0 +1,48 @@
+{
+	"name": "ds_Sink_emp_SqlServerTable_Gopi",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sqlserver_Gopi",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Gopi"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "EmployeeID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "EmployeeName",
+				"type": "varchar"
+			},
+			{
+				"name": "Department",
+				"type": "varchar"
+			},
+			{
+				"name": "Salary",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "JoiningDate",
+				"type": "date"
+			},
+			{
+				"name": "Location",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "STG",
+			"table": "Employee_Staging"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

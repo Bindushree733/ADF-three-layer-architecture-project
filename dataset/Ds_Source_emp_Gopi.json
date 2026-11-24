@@ -1,0 +1,53 @@
+{
+	"name": "Ds_Source_emp_Gopi",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blob_storage_Gopi",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Gopi"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "employee_details_Gopi.txt",
+				"container": "bronze"
+			},
+			"columnDelimiter": ",",
+			"rowDelimiter": "\n",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "EmployeeID",
+				"type": "String"
+			},
+			{
+				"name": "EmployeeName",
+				"type": "String"
+			},
+			{
+				"name": "Department",
+				"type": "String"
+			},
+			{
+				"name": "Salary",
+				"type": "String"
+			},
+			{
+				"name": "JoiningDate",
+				"type": "String"
+			},
+			{
+				"name": "Location\r",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

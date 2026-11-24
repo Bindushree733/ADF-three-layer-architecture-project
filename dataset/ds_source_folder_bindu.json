@@ -1,0 +1,34 @@
+{
+	"name": "ds_source_folder_bindu",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blob_storage_bindu",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"src_container": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "bindu"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": {
+					"value": "@dataset().src_container",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
